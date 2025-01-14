@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil - {{ app.user.partner.name }}{% endblock %}
+
+{% block body %}
+
+<div class="pt-[7%]">
+<div class="container mx-auto px-4 py-8">
+    <h2 class="text-2xl font-semibold text-center mb-8">Profil partenaire</h2>
+
+    <section class="bg-white shadow-lg rounded-lg p-6 mb-8">
+        {% if app.user %}
+            <h3 class="text-xl font-semibold text-gray-700 mb-4">Informations générales</h3>
+            <div class="space-y-3">
+                <p><span class="font-semibold">Partenaire :</span> {{ app.user.partner.name }}</p>
+                <p><span class="font-semibold">Email :</span> {{ app.user.email }}</p>
+                <p><span class="font-semibold">Mot de passe :</span> ********</p>
+            </div>
+        {% endif %}
+    </section>
+
+    <section class="bg-white shadow-lg rounded-lg p-6 mb-8">
+        <h3 class="text-xl font-semibold text-gray-700 mb-4">Description</h3>
+        <p>{{ app.user.partner.description | default('Aucune description') }}</p>
+    </section>
+
+    <section class="bg-white shadow-lg rounded-lg p-6 mb-8">
+        {% if activities is not empty %}
+            <h3 class="text-xl font-semibold text-gray-700 mb-4">Activités</h3>
+            <ul class="list-disc pl-5 space-y-2">
+                {% for activity in activities %}
+                    <li>{{ activity.name | default('Aucune activité') }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Vous n'avez eneregistré aucune activité</p>
+        {% endif %}
+    </section>
+
+    <div class="text-center">
+        <a href="{{ path('app_profile_edit') }}">
+            <button class="rounded-lg bg-blue-600 px-6 py-2 text-white font-semibold hover:bg-blue-700 transition-colors">Modifier les informations</button>
+        </a>
+    </div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,301 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Village des Solutions (Châtellerault) - Accueil
+{% endblock %}
+
+{% block body %}
+
+	<section class="flex shadow-xl flex-col bg-contain bg-no-repeat md:bg-no-repeat bg-cover py-96 relative" style="background-image:url('{{asset('images/bgvillageds.jpeg')}}'); background-position: center center; background-size: cover;">
+		<div class="absolute inset-0 bg-black opacity-50 transition-opacity duration-500"></div>
+		<div class="relative z-0 flex justify-center items-center text-center text-white flex-col">
+			<div class="bg-gray-700 bg-opacity-50 p-4 border border-white">
+				<h1 class="text-5xl font-bold font-serif text-shadow-lg">Le Village des Solutions</h1>
+				<p class="text-3xl text-[#b5d997] font-semibold mt-4 font-serif">"À plusieurs, on est plus fort"</p>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="bg-gray-100 py-[10%]">
+		<div class="container mx-auto px-6">
+			<p class="text-yellow-400 font-bold text-2xl pb-8" data-aos="fade-up">À propos...</p>
+			<p class="font-bold text-2xl text-center pb-4" data-aos="fade-up">
+				Le Village est un tiers-lieu unique d'insertion sociale et professionnelle ouvert à tous et favorisant la coopération entre les acteurs du territoire.
+			</p>
+			<p class="text-lg text-center pb-12" data-aos="fade-up">
+				Un
+				<span class="text-orange-500 font-bold">Village des solutions</span>
+				est, de ce fait, un
+				<span class="font-bold">tiers-lieu d'innovation sociale</span>
+				et d'assemblage de solutions,
+				<span class="font-bold">ouvert aux partenaires</span>
+				et qui se caractérise notamment par :
+			</p>
+
+			<div class="flex flex-wrap justify-center gap-16 text-center" data-aos="fade-up">
+				<div class="w-[25rem] p-6 bg-white shadow-md rounded-xl border border-orange-500">
+					<div class="text-orange-500 font-bold mb-4">Des partenariats aux services de l'accompagnement des parcours</div>
+					<p class="text-gray-700">
+						Co-construction de solution avec les partenaires pour accompagner les publics en insertion face à leurs problématiques clés : santé, mobilité, logement, parentalité, numérique.
+					</p>
+					<img src="{{asset('images/partnershiplogo.png')}}" class="h-24 w-24 border-4 border-orange-500 rounded-full mt-8 mx-auto" alt="Partnership logo">
+				</div>
+
+				<div class="w-[25rem] p-6 bg-white shadow-md rounded-xl border border-orange-500">
+					<div class="text-orange-500 font-bold mb-4">Un conseil de village</div>
+					<p class="text-gray-700">
+						Le conseil du village a lieu
+						<span class="font-semibold">tous les trimestres</span>
+						et rassemble
+						<span class="font-semibold">tous les usagers du Village</span>: partenaires, publics, Afpa, entreprises, acteurs institutionnels, etc.
+					</p>
+					<img src="{{asset('images/meetinglogo.png')}}" class="h-24 w-24 border-4 border-orange-500 rounded-full mt-8 mx-auto" alt="Meeting logo">
+				</div>
+			</div>
+
+			<div class="flex flex-wrap justify-center gap-16 text-center mt-12" data-aos="fade-up">
+				<div class="w-[25rem] p-6 bg-white shadow-md rounded-xl border border-orange-500">
+					<div class="text-orange-500 font-bold mb-4">L'accueil des partenaires en résidence</div>
+					<p class="text-gray-700">
+						Mise à disposition de locaux sur le Village pour
+						<span class="font-semibold">l'installation ponctuelle ou permanente</span>
+						des partenaires sur place.
+					</p>
+					<img src="{{asset('images/homeworklogo.png')}}" class="h-24 w-24 border-4 border-orange-500 rounded-full mt-8 mx-auto" alt="Home work logo">
+				</div>
+
+				<div class="w-[25rem] p-6 bg-white shadow-md rounded-xl border border-orange-500">
+					<div class="text-orange-500 font-bold mb-4">Un incubateur de solutions</div>
+					<p class="text-gray-700">
+						L'incubateur des solutions est un dispositif innovant
+						<span class="font-semibold">d'ingénierie de réponse à des appels à projet</span>
+						du territoire en consortium.
+					</p>
+					<img src="{{asset('images/reflexionlogo.png')}}" class="h-24 w-24 border-4 border-orange-500 rounded-full mt-8 mx-auto" alt="Reflexion logo">
+				</div>
+			</div>
+		</div>
+
+		<div class="flex justify-center items-center pt-4 flex-col" data-aos="zoom-in">
+			<video width="800" controls>
+				<source src="{{ asset('videos/Afpavds.mp4') }}" type="video/mp4">
+			</video>
+			<p class="pt-2 font-semibold">Châtellerault : L’Afpa inaugure « Le Village des solutions » pour lever les freins à l’emploi</p>
+		</div>
+	</section>
+
+
+	<p class="text-yellow-400 font-bold text-2xl pb-8 container mx-auto pt-[2%]" data-aos="fade-up">En Bref...</p>
+	<p class="font-bold text-xl text-center py-8" data-aos="fade-up">Une vocation à répondre aux problématiques d'insertion socioprofessionnelles sur le territoire...</p>
+
+	<section class="flex flex-wrap justify-center gap-8 container mx-auto px-6" data-aos="fade-up">
+		<div data-aos="fade-right" class="w-1/2 px-6 py-8">
+			<p class="font-semibold text-lg pb-8">Le monde de l'insertion sociale et professionnelle est confronté à des enjeux...</p>
+			<ul>
+				<li class="flex items-center mb-6">
+					<img src="{{asset('images/firedlogo.png')}}" class="h-16 mr-4" alt="Fired logo">
+					<div class="flex flex-col">
+						<p class="text-[#b5d997] font-semibold">Des freins périphériques à l'emploi</p>
+						<p>Publics, partenaires, entreprises, associations, etc.</p>
+					</div>
+				</li>
+				<li class="flex items-center mb-6">
+					<img src="{{asset('images/linklogo.png')}}" class="h-16 mr-4" alt="Link logo">
+					<p class="text-gray-500 font-semibold">Des difficultés de mise en relation entre l'offre et la demande de formation professionnelle</p>
+				</li>
+				<li class="flex items-center mb-6">
+					<img src="{{asset('images/ecosystemlogo.png')}}" class="h-16 mr-4" alt="Ecosystem logo">
+					<div class="flex flex-col">
+						<p class="text-orange-500 font-semibold">Un besoin des acteurs de l'insertion professionnelle de se rapprocher et de travailler en écosystème</p>
+						<p>Entreprises, associations, acteurs institutionnels, etc.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div data-aos="fade-left" class="w-1/2 px-6 py-8">
+			<p class="font-semibold text-lg pb-8">... auxquels les Villages des solutions répondent sur chaque territoire</p>
+			<ul>
+				<li class="flex items-center mb-6">
+					<img src="{{asset('images/puzzlelogo.png')}}" class="h-16 mr-4" alt="Puzzle logo">
+					<div class="flex flex-col">
+						<p class="text-[#b5d997] font-semibold">Un accompagnement des parcours de vie des publics sur les principaux freins à l'emploi</p>
+						<p>Mobilité, santé, médiation numérique, logement, parentalité</p>
+					</div>
+				</li>
+				<li class="flex items-center mb-6">
+					<img src="{{asset('images/socialspacelogo.png')}}" class="h-16 mr-4" alt="Social space logo">
+					<div class="flex flex-col">
+						<p class="text-gray-500 font-semibold">Des lieux ouverts à tous accueillant une pluralité d'acteurs</p>
+						<p>Publics, partenaires, entreprises, associations, etc.</p>
+					</div>
+				</li>
+				<li class="flex items-center mb-6">
+					<img src="{{asset('images/sociallinklogo.png')}}" class="h-16 mr-4" alt="Social link logo">
+					<div class="flex flex-col">
+						<p class="text-orange-500 font-semibold">Des lieux collaboratifs de rencontres et d'échanges</p>
+						<p>Groupes de travail thématiques, incubateur des solutions</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="bg-gray-100 py-16" data-aos="zoom-in">
+		<div class="container mx-auto px-6">
+			<p class="font-bold text-yellow-400 text-xl pb-8">Les thèmes et problématiques clés...</p>
+			<p class="text-lg mb-8">
+				Tout au long de son parcours, une personne peut être confrontée à des
+				<span class="font-bold">problématiques</span>
+				qui peuvent faire échouer son insertion. Ces problématiques sont de nature plurielle :
+			</p>
+
+			<div class="grid grid-cols-4 gap-6">
+				{% for problema in problematics %}
+					{% set color = '' %}
+					{% set image = '' %}
+					{% if problema.name == 'Logement' %}
+						{% set color = '[#005098]' %}
+						{% set image = 'house.png' %}
+					{% elseif problema.name == 'Numérique' %}
+						{% set color = '[#a5a5a5]' %}
+						{% set image = 'numeric.png' %}
+					{% elseif problema.name == 'Parentalité' %}
+						{% set color = '[#8dcfb1]' %}
+						{% set image = 'parenthood.png' %}
+					{% elseif problema.name == 'Santé' %}
+						{% set color = '[#b90f5f]' %}
+						{% set image = 'health.png' %}
+					{% elseif problema.name == 'Mobilité' %}
+						{% set color = '[#ea5b0c]' %}
+						{% set image = 'mobility.png' %}
+					{% elseif problema.name == 'Environnement' %}
+						{% set color = '[#169d9d]' %}
+						{% set image = 'environment.png' %}
+					{% elseif problema.name == 'Argent' %}
+						{% set color = '[#169d9d]' %}
+						{% set image = 'money.png' %}
+					{% elseif problema.name == 'Psychologie' %}
+						{% set color = '[#b90f5f]' %}
+						{% set image = 'psychology.png' %}
+					{% endif %}
+
+					<a href="#">
+						<div class="hover:bg-{{ color }} min-h-[100px] transition duration-300 ease-in-out relative flex flex-col my-6 bg-white shadow-md border border-{{ color }} rounded-lg">
+							<div class="p-4 relative w-full h-full flex items-center justify-center">
+								<div class="flex flex-col items-center">
+									<h5 class="mb-2 text-{{ color }} font-semibold text-center uppercase">{{ problema.name }}</h5>
+									<img src="{{ asset('images/' ~ image) }}" alt="Image du thème" class="h-8 ">
+								</div>
+								<p class="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out text-white leading-normal font-light text-center flex items-center justify-center">
+									{{ problema.description }}
+								</p>
+							</div>
+						</div>
+					</a>
+				{% endfor %}
+			</div>
+
+			<div class="pt-[3%] pb-[2%]">
+				<div class="flex items-center border rounded-xl border-gray-800 py-3 px-4">
+					<img src="{{ asset('images/lumiere.png') }}" class="h-8 mr-4" alt="lumiere image">
+					<p class="text-gray-700 font-semibold text-center text-xl">
+						La mission principale du Village sera d'apporter des réponses à ces freins afin d'améliorer les parcours d'insertion des publics sur le territoire.
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<section class="py-16">
+		<p class="text-3xl font-bold text-center mb-8 text-gray-800">Panorama des solutions actuellement déployées sur le Village de Châtellerault</p>
+
+		<div class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+			{% for category in categories %}
+				{% set color = '' %}
+				{% set icon = '' %}
+				{% if category.name == 'Logement' %}
+					{% set color = 'bg-[#005098]' %}
+					{% set icon = 'iconhome.png' %}
+				{% elseif category.name == 'Numérique' %}
+					{% set color = 'bg-[#a5a5a5]' %}
+					{% set icon = 'iconcomputer.png' %}
+				{% elseif category.name == 'Parentalité' %}
+					{% set color = 'bg-[#8dcfb1]' %}
+					{% set icon = 'iconparenthood.png' %}
+				{% elseif category.name == 'Santé' %}
+					{% set color = 'bg-[#b90f5f]' %}
+					{% set icon = 'iconhealth.png' %}
+				{% elseif category.name == 'Mobilité' %}
+					{% set color = 'bg-[#ea5b0c]' %}
+					{% set icon = 'iconmobility.png' %}
+				{% elseif category.name == 'Marqueurs différenciants/Autre' %}
+					{% set color = 'bg-[#169d9d]' %}
+					{% set icon = 'iconother.png' %}
+				{% endif %}
+
+				<div class="flex flex-col bg-white border shadow-lg rounded-xl transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl min-h-[280px]">
+					<div class="flex items-center gap-4 p-4 border-b {{color}} rounded-t-xl">
+						<img src="{{asset('images/' ~ icon)}}" class="h-10 w-10" alt="logo de {{category.name}}">
+						<p class="text-lg font-semibold text-white capitalize">{{category.name}}</p>
+					</div>
+					<div class="p-6 flex-grow">
+						{% for partner in category.partners %}
+							<a href="{{path('app_partner', {id: partner.id})}}">
+								<h3 class="text-xl text-gray-800 hover:text-gray-400 transition-colors duration-200">{{partner.name}}</h3>
+							</a>
+						{% endfor %}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+
+
+	<section class="bg-gray-100 py-16" data-aos="zoom-in">
+		<p class="text-xl font-bold text-center pb-8">Mur des partenaires</p>
+		<div
+			class="splide" aria-labelledby="carousel-heading">
+			{# <h2 id="carousel-heading" class="sr-only">Carrousel des logos des partenaires</h2> #}
+			<div class="splide__track">
+				<ul class="splide__list">
+					{% for partnerlogo in partner %}
+						{% if partnerlogo.logo %}
+							<li class="splide__slide">
+								<a href="{{ path('app_partner', {id: partnerlogo.id}) }}">
+									<img src="{{ asset(partnerlogo.logo) }}" class="h-16" alt="Logo">
+								</a>
+							</li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16" id="contact" data-aos="fade-up">
+		<div class="flex flex-col items-center pb-4">
+			<p class="font-semibold text-lg text-center text-gray-700">Vous avez des questions ou besoin de renseignements supplémentaires ?</p>
+			<p class="text-orange-500 font-semibold">Contactez-nous :</p>
+		</div>
+		<form action="" class="flex flex-col pt-8 items-center gap-6 max-w-lg mx-auto bg-white rounded-lg shadow-lg p-8">
+			<label for="motif" class="font-medium text-gray-700">Motif :</label>
+			<input type="text" id="motif" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Motif de votre message">
+
+			<label for="email" class="font-medium text-gray-700">Email :</label>
+			<input type="email" id="email" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="votremail@example.com">
+
+			<label for="message" class="font-medium text-gray-700">Message :</label>
+			<textarea id="message" rows="6" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Ecrivez votre message"></textarea>
+
+			<button class="mt-4 bg-orange-500 text-white py-2 px-6 rounded-lg hover:bg-orange-600 transition-all duration-300 focus:outline-none">
+				Envoyer
+			</button>
+		</form>
+
+	</section>
+
+
+{% endblock %}

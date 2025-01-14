@@ -1,0 +1,18 @@
+body {
+    background-color: #fafafa;
+}
+
+/* Centrer le carrousel horizontalement */
+.splide {
+    width: 100%;
+    max-width: 1200px; /* Vous pouvez ajuster cette valeur en fonction de la largeur maximale que vous voulez */
+    margin: 0 auto; /* Centrer le carrousel */
+  }
+  
+  /* Optionnel : ajuster les logos pour mieux s'adapter dans l'espace */
+  .splide__slide img {
+    display: block;
+    margin: 0 auto; /* Centrer l'image */
+    object-fit: contain; /* Si nécessaire pour que l'image conserve ses proportions */
+  }
+  

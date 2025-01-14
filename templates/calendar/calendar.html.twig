@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Calendrier - Village des Solutions
+{% endblock %}
+
+{% block body %}
+
+	<p class="text-3xl font-semibold pt-[7%] text-center pt-16 text-gray-800">Agenda des interventions des partenaires du village</p>
+	<div class="pt-10 pb-12">
+		<div class="container mx-auto bg-white shadow-lg rounded-lg p-6" id="calendar"></div>
+	</div>
+	<div id="eventModal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 z-50 flex justify-center items-center">
+		<div class="bg-white rounded-lg w-1/3 h-auto max-h-[80%] overflow-auto p-6 shadow-xl">
+			<h2 id="modalTitle" class="font-semibold text-2xl text-gray-900 mb-4"></h2>
+			<p id="modalDescription" class="text-gray-600 text-xl mb-4"></p>
+			<p id="modalDate" class="text-xl text-gray-800 mb-4"></p>
+			<div class="flex justify-center mb-4">
+				<p id="modalstartDate" class="text-xl text-gray-800"></p>
+				<span class="mx-2">-</span>
+				<p id="modalendDate" class="text-xl text-gray-800"></p>
+			</div>
+			<h2 class="text-xl text-gray-800">Nombre de places :
+				<span id="modalPlaces" class="text-xl font-semibold text-blue-600"></span>
+			</h2>
+			<p class="text-xl text-blue-800 mt-4">Lieu :
+				<a href="https://www.google.com/maps/dir/Poitiers/afpa+chatellerault+adresse/@46.7073685,0.2776965,11z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x47fdbe72439eb3ab:0x97de2319c5e09093!2m2!1d0.3416875!2d46.5798429!1m5!1m1!1s0x47fda9c521cdca79:0x219189910ee54607!2m2!1d0.5323447!2d46.8131894?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" class="text-blue-800 underline" target="_blank">205 Gd Rue de Châteauneuf, 86100 Châtellerault (Afpa)</a>
+			</p>
+			<div class="pt-4 flex justify-center">
+				<button onclick="modalClose()" class="rounded-lg bg-blue-600 px-6 py-2 text-white font-semibold hover:bg-blue-700 transition duration-300">Fermer</button>
+			</div>
+			<a href="{{path('app_registration_interventions')}}">
+				<div class="pt-4 flex justify-center">
+					<p class="rounded-lg text-center w-1/2 bg-blue-600 px-6 py-2 text-white font-semibold hover:bg-blue-700 transition duration-300">Inscrire un participant !</p>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<script src="/calendar.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet"/>
+
+{% endblock %}

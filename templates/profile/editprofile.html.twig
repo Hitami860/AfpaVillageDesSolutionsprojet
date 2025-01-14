@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Édition du profil - {{ app.user.partner.name }}{% endblock %}
+
+{% block body %}
+
+<div class="pt-[7%]">
+<div class="container mx-auto mt-10 p-6 bg-white shadow-xl rounded-lg max-w-4xl">
+    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-6">Modifier les informations de votre profil</h2>
+
+    {{ form_start(form) }}
+
+    <div class="mb-6">
+        {{ form_row(form.name, {
+            'label': 'Nom',
+            'attr': {
+                'class': 'w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300'
+            }
+        }) }}
+    </div>
+
+    <div class="mb-6">
+        {{ form_row(form.description, {
+            'label': 'Description',
+            'attr': {
+                'class': 'w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300'
+            }
+        }) }}
+    </div>
+
+    <div class="mb-6">
+        {{ form_row(form.website, {
+            'label': 'Site Web',
+            'attr': {
+                'class': 'w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300'
+            }
+        }) }}
+    </div>
+
+    <div class="mb-6">
+        {{ form_row(form.logo, {
+            'label': 'Logo entreprise',
+            'attr': {
+                'class': 'w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300'
+            }
+        }) }}
+    </div>
+
+    <div class="flex justify-center mt-8">
+        <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition duration-200 transform hover:scale-105">
+            Mettre à jour
+        </button>
+    </div>
+
+    {{ form_end(form) }}
+</div>
+</div>
+
+{% endblock %}
