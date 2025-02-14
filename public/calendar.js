@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
 
 
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
+    let calendarEl = document.getElementById('calendar');
+    let calendar = new FullCalendar.Calendar(calendarEl, {
       initialView: 'dayGridMonth',
       events: "/calendar/date",
       // selectable: true,
       
 
       eventClick:  function(info) {
-        var event = info.event;
+        let event = info.event;
 
         console.log('clik', event);
         document.getElementById('modalTitle').innerText = event.title;
