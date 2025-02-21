@@ -19,9 +19,9 @@ class DashboardController extends AbstractDashboardController
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-        if (!$this->isGranted('ROLE_AFPA')) {
-            throw $this->createAccessDeniedException("Vous n'avez pas accès à cette page!");
-        }
+        // if (!$this->isGranted('ROLE_AFPA')) {
+        //     throw $this->createAccessDeniedException("Vous n'avez pas accès à cette page!");
+        // }
         {return $this->render('admin/admin.html.twig');}
         // Option 1. You can make your dashboard redirect to some common page of your backend
         //
